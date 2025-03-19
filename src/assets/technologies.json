@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Vue.js",
+        "icon": "/media/vue.png",
+        "description": "JavaScript library"
+    },
+    {
+        "name": "C#",
+        "icon": "/media/csharp.png",
+        "description": "Java, but Microsoft"
+    },
+    {
+        "name": "Java",
+        "icon": "/media/java.png",
+        "description": "Cross-platform"
+    },
+    {
+        "name": "C++",
+        "icon": "/media/c++.png",
+        "description": "High-performance language"
+    },
+    {
+        "name": "Blazor",
+        "icon": "/media/Blazor.png",
+        "description": "C# frontend"
+    },
+    {
+        "name": "Git",
+        "icon": "/media/Git.png",
+        "description": "Version control"
+    },
+    {
+        "name": ".NET",
+        "icon": "/media/_.NET.png",
+        "description": "Microsoft framework"
+    },
+    {
+        "name": "Docker",
+        "icon": "/media/docker.png",
+        "description": "Application deployment"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "/media/typescript.png",
+        "description": "JavaScript, but responsible"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "/media/JavaScript.png",
+        "description": "The web"
+    },
+    {
+        "name": "Ubuntu",
+        "icon": "/media/ubuntu.png",
+        "description": "Prefereed distro"
+    }
+]
+  
