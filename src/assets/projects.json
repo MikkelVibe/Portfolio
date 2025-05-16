@@ -1,0 +1,31 @@
+[
+    {
+        "name": "TilbudsFinder.dk",
+        "imagePath": "/projects/TilbudsFinder.png",
+        "intro": "Discounts simplified",
+        "description": "Tilbudsfinder is a web application built with C# and .NET that aggregates and displays current grocery store discounts. It utilizes a robust API for seamless data integration and is deployed on a Linux VPS, ensuring reliable and scalable performance. The project is designed to provide users with a streamlined way to find and compare deals, making grocery shopping more cost-efficient and convenient.",
+        "technologies": [
+            "C#",
+            "Blazor",
+            "JavaScript",
+            "Ubuntu",
+            "MSSQL",
+            ".NET"
+        ]
+    },
+    {
+        "name": "FluxETL",
+        "imagePath": "/projects/FluxETL.png",
+        "intro": "Lowcode ETL pipeline builder",
+        "description": "FluxETL is a low code ETL pipeline builder",
+        "technologies": [
+            "C#",
+            ".NET",
+            "Vue.js",
+            "TypeScript",
+            "MySQL",
+            "Apache Kafka",
+            "Docker"
+        ]
+    }
+]

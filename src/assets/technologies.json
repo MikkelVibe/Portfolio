@@ -2,57 +2,79 @@
     {
         "name": "Vue.js",
         "icon": "/media/vue.png",
-        "description": "JavaScript library"
+        "description": "JavaScript library",
+        "enabled": true
     },
     {
         "name": "C#",
         "icon": "/media/csharp.png",
-        "description": "Java, but Microsoft"
+        "description": "Java, but Microsoft",
+        "enabled": true
     },
     {
         "name": "Java",
         "icon": "/media/java.png",
-        "description": "Cross-platform"
+        "description": "Cross-platform",
+        "enabled": true
     },
     {
         "name": "C++",
         "icon": "/media/c++.png",
-        "description": "High-performance language"
+        "description": "Low level language",
+        "enabled": false
     },
     {
         "name": "Blazor",
         "icon": "/media/Blazor.png",
-        "description": "C# frontend"
+        "description": "C# frontend",
+        "enabled": true
     },
     {
         "name": "Git",
         "icon": "/media/Git.png",
-        "description": "Version control"
+        "description": "Version control",
+        "enabled": true
     },
     {
         "name": ".NET",
         "icon": "/media/_.NET.png",
-        "description": "Microsoft framework"
+        "description": "Microsoft framework",
+        "enabled": true
     },
     {
         "name": "Docker",
         "icon": "/media/docker.png",
-        "description": "Application deployment"
+        "description": "Application deployment",
+        "enabled": true
     },
     {
         "name": "TypeScript",
         "icon": "/media/typescript.png",
-        "description": "JavaScript, but responsible"
+        "description": "JavaScript, but responsible",
+        "enabled": true
     },
     {
         "name": "JavaScript",
         "icon": "/media/JavaScript.png",
-        "description": "The web"
+        "description": "The web",
+        "enabled": true
     },
     {
         "name": "Ubuntu",
         "icon": "/media/ubuntu.png",
-        "description": "Prefereed distro"
+        "description": "Distro of choice",
+        "enabled": true
+    },
+    {
+        "name": "MySQL",
+        "icon": "/media/mysqlLogo.png",
+        "description": "Open source database",
+        "enabled": true
+    },
+    {
+        "name": "MSSQL",
+        "icon": "/media/mssqllogo.png",
+        "description": "Microsoft database",
+        "enabled": true
     }
-]
-  
+]  
