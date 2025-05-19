@@ -60,6 +60,12 @@
         "enabled": true
     },
     {
+        "name": "CSS",
+        "icon": "/media/CSS.png",
+        "description": "Styling",
+        "enabled": true
+    },
+    {
         "name": "Ubuntu",
         "icon": "/media/ubuntu.png",
         "description": "Distro of choice",
