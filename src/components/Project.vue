@@ -6,13 +6,6 @@
         <div class="project-info">
             <div class="project-header">
                 <h2 class="project-title">{{ project.name }}</h2>
-                <a :href="project.link" target="_blank" class="external-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
             </div>
             <div class="tech-list">
                 <span class="tech-badge" v-for="(tech, index) in project.technologies" :key="index">
@@ -38,7 +31,7 @@ defineProps<{
 <style scoped>
 .project-card {
     width: 100%;
-    flex: 1 1 calc(33.333% - 1rem);
+    flex: 1 1 calc(50% - 1rem);
     max-height: 50rem;
     box-sizing: border-box;
     background-color: #1a1a1a;
@@ -48,6 +41,8 @@ defineProps<{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 20px solid #1a1a1a;
+    /* Added border */
 }
 
 .image-wrapper {
@@ -97,12 +92,6 @@ defineProps<{
     background-color: #2563eb;
 }
 
-.arrow-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    stroke: white;
-}
-
 .tech-list {
     display: flex;
     flex-wrap: wrap;
@@ -113,9 +102,21 @@ defineProps<{
     background-color: #2d2d2d;
     border: 1px solid #444;
     padding: 0.4rem 0.8rem;
-    border-radius: 999px;
+    border-radius: 4px;
     font-size: 0.875rem;
     font-weight: 500;
     color: #fff;
+    align-content: center;
+    text-align: center;
+}
+
+.tech-badge:nth-child(5n) {
+    flex-basis: 100%;
+    height: 0;
+    padding: 0;
+    border: none;
+    margin: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 </style>

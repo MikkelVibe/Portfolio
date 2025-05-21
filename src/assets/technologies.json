@@ -1,86 +1,100 @@
 [
-    {
-        "name": "Vue.js",
-        "icon": "/media/vue.png",
-        "description": "JavaScript library",
-        "enabled": true
-    },
-    {
-        "name": "C#",
-        "icon": "/media/csharp.png",
-        "description": "Java, but Microsoft",
-        "enabled": true
-    },
-    {
-        "name": "Java",
-        "icon": "/media/java.png",
-        "description": "Cross-platform",
-        "enabled": true
-    },
-    {
-        "name": "C++",
-        "icon": "/media/c++.png",
-        "description": "Low level language",
-        "enabled": false
-    },
-    {
-        "name": "Blazor",
-        "icon": "/media/Blazor.png",
-        "description": "C# frontend",
-        "enabled": true
-    },
-    {
-        "name": "Git",
-        "icon": "/media/Git.png",
-        "description": "Version control",
-        "enabled": true
-    },
-    {
-        "name": ".NET",
-        "icon": "/media/_.NET.png",
-        "description": "Microsoft framework",
-        "enabled": true
-    },
-    {
-        "name": "Docker",
-        "icon": "/media/docker.png",
-        "description": "Application deployment",
-        "enabled": true
-    },
-    {
-        "name": "TypeScript",
-        "icon": "/media/typescript.png",
-        "description": "JavaScript, but responsible",
-        "enabled": true
-    },
-    {
-        "name": "JavaScript",
-        "icon": "/media/JavaScript.png",
-        "description": "The web",
-        "enabled": true
-    },
-    {
-        "name": "CSS",
-        "icon": "/media/CSS.png",
-        "description": "Styling",
-        "enabled": true
-    },
-    {
-        "name": "Ubuntu",
-        "icon": "/media/ubuntu.png",
-        "description": "Distro of choice",
-        "enabled": true
-    },
-    {
-        "name": "MySQL",
-        "icon": "/media/mysqlLogo.png",
-        "description": "Open source database",
-        "enabled": true
-    },
-    {
-        "name": "MSSQL",
-        "icon": "/media/mssqllogo.png",
-        "description": "Microsoft database",
-        "enabled": true
-    }
-]  
+  {
+    "name": "Vue.js",
+    "icon": "/media/vue.png",
+    "description": "JavaScript library",
+    "link": "https://vuejs.org/",
+    "enabled": true
+  },
+  {
+    "name": "C#",
+    "icon": "/media/csharp.png",
+    "description": "Java, but Microsoft",
+    "link": "https://docs.microsoft.com/en-us/dotnet/csharp/",
+    "enabled": true
+  },
+  {
+    "name": "Java",
+    "icon": "/media/java.png",
+    "description": "Cross-platform",
+    "link": "https://www.java.com/",
+    "enabled": true
+  },
+  {
+    "name": "C++",
+    "icon": "/media/c++.png",
+    "description": "Low level language",
+    "link": "https://isocpp.org/",
+    "enabled": false
+  },
+  {
+    "name": "Blazor",
+    "icon": "/media/Blazor.png",
+    "description": "C# frontend",
+    "link": "https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor",
+    "enabled": true
+  },
+  {
+    "name": "Git",
+    "icon": "/media/Git.png",
+    "description": "Version control",
+    "link": "https://git-scm.com/",
+    "enabled": true
+  },
+  {
+    "name": ".NET",
+    "icon": "/media/_.NET.png",
+    "description": "Microsoft framework",
+    "link": "https://dotnet.microsoft.com/",
+    "enabled": true
+  },
+  {
+    "name": "Docker",
+    "icon": "/media/docker.png",
+    "description": "Application deployment",
+    "link": "https://www.docker.com/",
+    "enabled": true
+  },
+  {
+    "name": "TypeScript",
+    "icon": "/media/typescript.png",
+    "description": "JavaScript, but responsible",
+    "link": "https://www.typescriptlang.org/",
+    "enabled": true
+  },
+  {
+    "name": "JavaScript",
+    "icon": "/media/JavaScript.png",
+    "description": "The web",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "enabled": true
+  },
+  {
+    "name": "CSS",
+    "icon": "/media/CSS.png",
+    "description": "Styling",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    "enabled": true
+  },
+  {
+    "name": "Ubuntu",
+    "icon": "/media/ubuntu.png",
+    "description": "Distro of choice",
+    "link": "https://ubuntu.com/",
+    "enabled": true
+  },
+  {
+    "name": "MySQL",
+    "icon": "/media/mysqlLogo.png",
+    "description": "Open source database",
+    "link": "https://www.mysql.com/",
+    "enabled": true
+  },
+  {
+    "name": "MSSQL",
+    "icon": "/media/mssqllogo.png",
+    "description": "Microsoft database",
+    "link": "https://learn.microsoft.com/en-us/sql/",
+    "enabled": true
+  }
+]

@@ -9,11 +9,9 @@
         </section>
     </transition>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TechCard from './TechCard.vue';
-
 export default defineComponent({
     components: { TechCard },
     data() {
@@ -34,17 +32,16 @@ export default defineComponent({
                 console.error('Error loading technologies JSON:', error)
             );
     },
-
 });
 </script>
-
 <style scoped>
 .technologies-section {
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     color: #1e1e1e;
     max-width: 1300px;
     margin: 0 auto;
     text-align: left;
+    width: 100%;
 }
 
 .title {
@@ -62,12 +59,10 @@ export default defineComponent({
 }
 
 .tech-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
-    padding-right: 1rem;
-    padding-left: 0;
+    width: 100%;
 }
 
 /* Cool Animation */
@@ -85,6 +80,18 @@ export default defineComponent({
     transform: scale(1) rotateX(0deg);
 }
 
+@media (min-width: 768px) {
+    .tech-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+    .tech-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 600px) {
     .title {
         font-size: 1.75rem;
@@ -95,7 +102,7 @@ export default defineComponent({
     }
 
     .tech-container {
-        gap: 1rem;
+        gap: 0.75rem;
     }
 }
 </style>

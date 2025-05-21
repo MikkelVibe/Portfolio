@@ -1,11 +1,13 @@
 <template>
-  <div class="tech-card">
-    <img :src="getImageUrl(tech.icon)" alt="Tech Icon" class="tech-icon" />
-    <div class="tech-info">
-      <h4 class="tech-title">{{ tech.name }}</h4>
-      <p class="tech-subtitle">{{ tech.description }}</p>
+  <component :is="tech.link ? 'a' : 'div'" :href="tech.link" target="_blank" rel="noopener" class="tech-card-link">
+    <div class="tech-card">
+      <img :src="getImageUrl(tech.icon)" alt="Tech Icon" class="tech-icon" />
+      <div class="tech-info">
+        <h4 class="tech-title">{{ tech.name }}</h4>
+        <p class="tech-subtitle">{{ tech.description }}</p>
+      </div>
     </div>
-  </div>
+  </component>
 </template>
 
 <script>
@@ -22,14 +24,18 @@ export default {
 </script>
 
 <style scoped>
+.tech-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .tech-card {
   display: flex;
   align-items: center;
   background-color: #181818;
   border-radius: 12px;
   padding: 12px 16px;
-  width: 200px;
-  height: 50px;
   gap: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition:
