@@ -1,39 +1,64 @@
 <template>
-    <transition name="zoom-fade-rotate">
-        <section class="technologies-section" v-if="loaded">
-            <h2 class="title">Technologies</h2>
-            <p class="subtitle">These are the technologies I am most proficient in.</p>
-            <div class="tech-container">
-                <TechCard v-for="(tech, index) in technologies" :key="index" :tech="tech" />
-            </div>
-        </section>
-    </transition>
+    <section class="technologies-section">
+        <h2 class="title" v-scroll-reveal>Technologies</h2>
+        <p class="subtitle" v-scroll-reveal>
+            These are the technologies I am most proficient in.
+        </p>
+        <div class="tech-container">
+            <TechCard v-for="(tech, index) in technologies" :key="index" :tech="tech" v-scroll-reveal
+                :style="{ transitionDelay: (index * 100) + 'ms' }" />
+        </div>
+    </section>
 </template>
+
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TechCard from './TechCard.vue';
+
 export default defineComponent({
     components: { TechCard },
     data() {
         return {
             technologies: [] as any[],
-            loaded: false,
         };
     },
+    directives: {
+        scrollReveal: {
+            mounted(el: HTMLElement) {
+                console.log('[ScrollReveal] Observing:', el);
+                el.classList.add('before-enter');
+
+                const observer = new IntersectionObserver(
+                    ([entry]) => {
+                        if (entry.isIntersecting) {
+                            console.log('[ScrollReveal] Entering:', el);
+                            el.classList.add('enter');
+                            el.classList.remove('before-enter');
+                            observer.unobserve(el);
+                            console.log('[ScrollReveal] Animation complete.');
+                        }
+                    },
+                    { threshold: 0.1 }
+                );
+
+                observer.observe(el);
+            }
+        }
+    },
     mounted() {
-        fetch('src/assets/technologies.json')
+        fetch('/assets/technologies.json')
             .then((response) => response.json())
             .then((data) => {
-                // Filter here before assigning
                 this.technologies = data.filter((t: { enabled: boolean }) => t.enabled);
-                this.loaded = true; // triggers the animation
+                console.log('✅ Loaded technologies:', this.technologies.length);
             })
             .catch((error) =>
-                console.error('Error loading technologies JSON:', error)
+                console.error('❌ Error loading technologies JSON:', error)
             );
-    },
+    }
 });
 </script>
+
 <style scoped>
 .technologies-section {
     padding-bottom: 2rem;
@@ -65,21 +90,19 @@ export default defineComponent({
     width: 100%;
 }
 
-/* Cool Animation */
-.zoom-fade-rotate-enter-from {
+/* Scroll Animation Classes */
+.before-enter {
     opacity: 0;
-    transform: scale(0.9) rotateX(15deg);
+    transform: scale(0.9) rotateX(15deg) translateY(40px);
 }
 
-.zoom-fade-rotate-enter-active {
+.enter {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg) translateY(0);
     transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.zoom-fade-rotate-enter-to {
-    opacity: 1;
-    transform: scale(1) rotateX(0deg);
-}
-
+/* Responsive Grid */
 @media (min-width: 768px) {
     .tech-container {
         grid-template-columns: repeat(4, 1fr);

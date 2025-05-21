@@ -10,7 +10,8 @@
             "JavaScript",
             "Ubuntu",
             "MSSQL",
-            ".NET"
+            ".NET",
+            "Git"
         ]
     },
     {
@@ -25,7 +26,8 @@
             "TypeScript",
             "MySQL",
             "Apache Kafka",
-            "Docker"
+            "Docker",
+            "Git"
         ]
     }
 ]
