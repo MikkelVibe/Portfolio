@@ -15,7 +15,7 @@
     },
     {
         "name": "FluxETL",
-        "imagePath": "/projects/FluxETL.png",
+        "imagePath": "/projects/ETL.png",
         "intro": "Lowcode ETL pipeline builder",
         "description": "FluxETL is a low code ETL pipeline builder",
         "technologies": [

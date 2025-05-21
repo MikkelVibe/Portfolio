@@ -23,16 +23,13 @@
     color: #fff;
     width: 100%;
     height: 100vh;
-    /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
 
-
-    /* Dots pattern (bottom layer) */
-    background-image: radial-gradient(circle at 1px 1px, #1e1e1e 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, #272727 1px, transparent 0);
     background-size: 30px 30px;
     background-repeat: repeat;
 }

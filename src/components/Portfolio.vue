@@ -1,5 +1,7 @@
 <template>
+
     <section class="projects-section">
+        <h2 class="title">My portfolio</h2>
         <div class="project-container">
             <Project v-for="(project, index) in projects" :key="index" :project="project" />
 
@@ -52,5 +54,12 @@ export default defineComponent({
     gap: 1rem;
     padding-right: 1rem;
     padding-left: 0;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #fff;
 }
 </style>

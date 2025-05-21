@@ -4,8 +4,16 @@
             <img :src="project.imagePath" :alt="project.name" class="project-image" />
         </div>
         <div class="project-info">
-            <h2 class="project-title">{{ project.name }}</h2>
-            <p class="project-intro">{{ project.intro }}</p>
+            <div class="project-header">
+                <h2 class="project-title">{{ project.name }}</h2>
+                <a :href="project.link" target="_blank" class="external-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor">
+                        <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
             <div class="tech-list">
                 <span class="tech-badge" v-for="(tech, index) in project.technologies" :key="index">
                     {{ tech }}
@@ -22,47 +30,77 @@ defineProps<{
         imagePath: string;
         intro: string;
         technologies: string[];
+        link: string;
     };
 }>();
 </script>
 
 <style scoped>
 .project-card {
+    width: 100%;
+    flex: 1 1 calc(33.333% - 1rem);
+    max-height: 50rem;
+    box-sizing: border-box;
     background-color: #1a1a1a;
     border-radius: 1.25rem;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .image-wrapper {
-    max-height: 400px;
     overflow: hidden;
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
 }
 
 .project-image {
     width: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover .project-image {
+    transform: scale(1.05);
 }
 
 .project-info {
-    padding: 2rem;
+    padding: 1.5rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .project-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
 }
 
-.project-intro {
-    font-size: 1.2rem;
-    color: #17c3b2;
-    margin-bottom: 1.5rem;
+.external-link {
+    background-color: #3b82f6;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.external-link:hover {
+    background-color: #2563eb;
+}
+
+.arrow-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    stroke: white;
 }
 
 .tech-list {
