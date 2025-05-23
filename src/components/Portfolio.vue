@@ -24,25 +24,18 @@ export default defineComponent({
     directives: {
         scrollReveal: {
             mounted(el) {
-                console.log('[Reveal] Element is being observed:', el);
-
                 el.classList.add('before-enter');
-                console.log('[Reveal] → before-enter added');
 
                 const observer = new IntersectionObserver(
                     ([entry]) => {
                         if (entry.isIntersecting) {
-                            console.log('[Reveal] ✅ Element entered viewport:', el);
                             el.classList.add('enter');
                             el.classList.remove('before-enter');
-                            console.log('[Reveal] → enter added, before-enter removed');
                             observer.unobserve(el);
-                            console.log('[Reveal] 🔁 Unobserved for performance');
                         }
                     },
                     { threshold: 0.1 }
                 );
-
                 observer.observe(el);
             }
         }

@@ -6,7 +6,7 @@
         </p>
         <div class="tech-container">
             <TechCard v-for="(tech, index) in technologies" :key="index" :tech="tech" v-scroll-reveal
-                :style="{ transitionDelay: (index * 100) + 'ms' }" />
+                :style="{ transitionDelay: (index * 50) + 'ms' }" />
         </div>
     </section>
 </template>
@@ -25,17 +25,14 @@ export default defineComponent({
     directives: {
         scrollReveal: {
             mounted(el: HTMLElement) {
-                console.log('[ScrollReveal] Observing:', el);
                 el.classList.add('before-enter');
 
                 const observer = new IntersectionObserver(
                     ([entry]) => {
                         if (entry.isIntersecting) {
-                            console.log('[ScrollReveal] Entering:', el);
                             el.classList.add('enter');
                             el.classList.remove('before-enter');
                             observer.unobserve(el);
-                            console.log('[ScrollReveal] Animation complete.');
                         }
                     },
                     { threshold: 0.1 }
@@ -50,10 +47,10 @@ export default defineComponent({
             .then((response) => response.json())
             .then((data) => {
                 this.technologies = data.filter((t: { enabled: boolean }) => t.enabled);
-                console.log('✅ Loaded technologies:', this.technologies.length);
+                console.log('Loaded technologies:', this.technologies.length);
             })
             .catch((error) =>
-                console.error('❌ Error loading technologies JSON:', error)
+                console.error('Error loading technologies JSON:', error)
             );
     }
 });
@@ -90,7 +87,6 @@ export default defineComponent({
     width: 100%;
 }
 
-/* Scroll Animation Classes */
 .before-enter {
     opacity: 0;
     transform: scale(0.9) rotateX(15deg) translateY(40px);
@@ -102,7 +98,6 @@ export default defineComponent({
     transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Responsive Grid */
 @media (min-width: 768px) {
     .tech-container {
         grid-template-columns: repeat(4, 1fr);

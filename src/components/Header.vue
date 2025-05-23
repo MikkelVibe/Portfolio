@@ -3,7 +3,7 @@
         <div class="content">
             <p class="location">BASED IN DENMARK</p>
             <h1 class="headline">
-                <span class="white">Full-stack </span>
+                <span class="white">Aspiring Full-stack </span>
                 <span class="blue">Web Developer</span>
             </h1>
             <p class="description">
@@ -34,7 +34,6 @@
     background-repeat: repeat;
 }
 
-/* Overlay fade using a pseudo element */
 .hero-section::before {
     content: "";
     position: absolute;

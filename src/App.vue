@@ -28,7 +28,6 @@ export default {
     background-color: #000;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
     padding-left: 1rem;
     /* Add horizontal padding */
     padding-right: 1rem;
