@@ -86,6 +86,7 @@ export default defineComponent({
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
