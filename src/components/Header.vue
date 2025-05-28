@@ -5,6 +5,7 @@
             <h1 class="headline">
                 <span class="white">Aspiring Full-stack </span>
                 <span class="blue">Web Developer</span>
+                <span> and Designer</span>
             </h1>
             <p class="description">
                 Hello, my name is Mikkel. A computer science student with a special interest for web.
@@ -29,7 +30,7 @@
     text-align: center;
     overflow: hidden;
 
-    background-image: radial-gradient(circle at 1px 1px, #272727 1px, transparent 0);
+    background-image: radial-gradient(circle at 1px 1px, #3d3d3d 1px, transparent 0);
     background-size: 30px 30px;
     background-repeat: repeat;
 }
@@ -39,10 +40,11 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 0;
 
     background: radial-gradient(ellipse closest-side at center,
-            transparent 60%,
-            #000 90%);
+            transparent 61%,
+            #000 100%);
 
     z-index: 1;
 }
@@ -51,6 +53,7 @@
     max-width: 800px;
     margin: 0 auto;
     transform: translateY(-8vh);
+    z-index: 2;
 }
 
 .location {
@@ -127,6 +130,39 @@
     100% {
         color: #17c3b2;
         filter: hue-rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .location {
+        font-size: 0.65rem;
+    }
+
+    .content {
+        padding: 0 1rem;
+        transform: translateY(-4vh);
+    }
+}
+
+@media (max-width: 480px) {
+    .headline {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+    }
+
+    .location {
+        font-size: 0.6rem;
     }
 }
 </style>

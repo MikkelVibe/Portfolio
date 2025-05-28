@@ -51,11 +51,15 @@ export default {
 }
 
 .tech-icon {
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
   border-radius: 6px;
+  object-fit: contain;
   transition: transform 0.25s ease;
 }
+
 
 .tech-card:hover .tech-icon {
   transform: rotate(5deg) scale(1.1);

@@ -1,0 +1,65 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "title": "AP in Computer Science",
+      "institution": "University College of Northern Jutland",
+      "from": "2023-09",
+      "to": null,
+      "color": "#3b82f6",
+      "description": "Learning the ins and outs of computers",
+      "highlights": [
+        "Currently pursuing Associate's degree in Computer Science",
+        "Focus on practical programming and system development",
+        "Building foundation in software engineering principles"
+      ],
+      "projects": [
+        {
+          "name": "3rd Semester Project",
+          "url": "https://github.com/MikkelVibeUCN/BeerWebshop"
+        },
+        {
+          "name": "4th Semester Project",
+          "url": "https://github.com/MikkelVibeUCN/ETLFrontend"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "HTX - Upper Secondary Education",
+      "institution": "Tradium",
+      "from": "2019-08",
+      "to": "2022-06",
+      "color": "#10b981",
+      "description": "Specialized with Game Development and Informatics",
+      "highlights": [
+        "Specialized with Game Development and Informatics",
+        "Developed technical foundation in programming",
+        "Completed upper secondary education with technical focus"
+      ],
+      "projects": [
+        {
+          "name": "Game Dev Project",
+          "url": "https://winnermikkel3.itch.io/terminator-game"
+        }
+      ]
+    }
+  ],
+  "work": [
+    {
+      "id": 1,
+      "position": "Student Junior Frontend Developer",
+      "company": "Econta Consulting Group",
+      "from": "2025-06",
+      "to": null,
+      "color": "#6366f1",
+      "description": "Developing creative frontend solutions",
+      "highlights": [
+        "Working with modern web technologies and frameworks",
+        "Collaborating with senior developers in professional environment",
+        "Gaining hands-on experience in software development lifecycle"
+      ],
+      "projects": []
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 <template>
     <div class="app-wrapper">
         <Header />
+        <TimeLine />
         <TechnologySection />
         <Portfolio />
     </div>
@@ -10,12 +11,14 @@
 import Header from './components/Header.vue';
 import Portfolio from './components/Portfolio.vue';
 import TechnologySection from './components/TecnologySection.vue';
+import TimeLine from './components/TimeLine.vue';
 
 export default {
     components: {
         Header,
         Portfolio,
-        TechnologySection
+        TechnologySection,
+        TimeLine
     }
 }
 </script>
