@@ -1,6 +1,10 @@
-version: '3'
+version: "3.9"
+
 services:
-  frontend:
-    build: .
-    ports:
-      - "5999:5999"
+  builder:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /var/www/mikkelvibe:/app/dist
+    command: sh -c "npm run build"
