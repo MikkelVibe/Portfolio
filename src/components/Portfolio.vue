@@ -2,19 +2,19 @@
     <section class="projects-section" v-scroll-reveal>
         <h2 class="title" v-scroll-reveal>My portfolio</h2>
         <div class="project-container">
-            <Project v-for="(project, index) in projects" :key="project.id || index" :project="project" v-scroll-reveal
-                :style="{ transitionDelay: (index * 120) + 'ms' }" />
+            <ProjectCard v-for="(project, index) in projects" :key="project.id || index" :project="project"
+                v-scroll-reveal :style="{ transitionDelay: (index * 120) + 'ms' }" />
         </div>
     </section>
 </template>
 
 <script>
-import Project from './Project.vue';
+import ProjectCard from './ProjectCard.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     components: {
-        Project
+        ProjectCard
     },
     data() {
         return {
@@ -76,7 +76,6 @@ export default defineComponent({
     color: #fff;
 }
 
-/* Animation classes */
 .before-enter {
     opacity: 0;
     transform: translateY(60px) scale(0.95);
@@ -86,7 +85,6 @@ export default defineComponent({
     opacity: 1;
     transform: translateY(0) scale(1);
     transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-    cursor: pointer;
 }
 
 @media (max-width: 768px) {

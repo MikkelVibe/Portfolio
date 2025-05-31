@@ -1,9 +1,10 @@
 [
     {
+        "id": 0,
         "name": "TilbudsFinder.dk",
         "imagePath": "/projects/TilbudsFinder.png",
-        "intro": "Discounts simplified",
-        "description": "Tilbudsfinder is a web application built with C# and .NET that aggregates and displays current grocery store discounts. It utilizes a robust API for seamless data integration and is deployed on a Linux VPS, ensuring reliable and scalable performance. The project is designed to provide users with a streamlined way to find and compare deals, making grocery shopping more cost-efficient and convenient.",
+        "shortIntro": "Find the best deals on grocer products",
+        "description": "Tilbudsfinder is a passion project of mine, initially created to minimize the amount of time spent looking through grocer papers. It's a web application built with C# and .NET that aggregates and displays current grocery store discounts. Utilizing a robust API for seamless data integration and is deployed on a Linux VPS, ensuring reliable and scalable performance. The project is designed to provide users with a streamlined way to find and compare deals, making grocery shopping more cost-efficient and convenient.",
         "technologies": [
             "C#",
             "Blazor",
@@ -12,13 +13,18 @@
             "MSSQL",
             ".NET",
             "Git"
+        ],
+        "links": [
+            {"name": "Github", "link": "https://github.com/MikkelVibeUCN/TilbudsAvisScraper"},
+            {"name": "Visit", "link": "https://tilbudsfinder.dk/"}
         ]
     },
     {
+        "id": 1,
         "name": "FluxETL",
         "imagePath": "/projects/ETL.png",
-        "intro": "Lowcode ETL pipeline builder",
-        "description": "FluxETL is a low code ETL pipeline builder",
+        "shortIntro": "Lowcode ETL pipeline builder",
+        "description": "FluxETL is a configuration-based data integration solution developed in collaboration with ECG, built using .NET 8, Apache Kafka, and Vue.js. The platform enables non-technical users to design and manage ETL pipelines through an intuitive no-code interface with drag-and-drop functionality. Its event-driven microservice architecture ensures high scalability, asynchronous processing, and robust error handling via dead-letter queues. Fully containerized for deployment with Kubernetes, FluxETL supports diverse data sources and destinations, and is designed for seamless integration into ECG's Enterprise Automation Platform.",
         "technologies": [
             "C#",
             ".NET",
@@ -27,7 +33,11 @@
             "MySQL",
             "Apache Kafka",
             "Docker",
-            "Git"
+            "Git",
+            "Kubernetes"
+        ],
+        "links": [
+            {"name": "Github", "link": "https://github.com/MikkelVibeUCN/ETLFrontend"}
         ]
     }
 ]

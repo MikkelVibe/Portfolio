@@ -1,44 +1,15 @@
 <template>
-    <div class="app-wrapper">
-        <Header />
-        <TimeLine />
-        <TechnologySection />
-        <Portfolio />
-    </div>
+    <router-view />
 </template>
 
-<script>
-import Header from './components/Header.vue';
-import Portfolio from './components/Portfolio.vue';
-import TechnologySection from './components/TecnologySection.vue';
-import TimeLine from './components/TimeLine.vue';
-
-export default {
-    components: {
-        Header,
-        Portfolio,
-        TechnologySection,
-        TimeLine
-    }
-}
+<script setup>
 </script>
 
-<style scoped>
-.app-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+<style>
+body {
+    margin: 0;
     background-color: #000;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 1rem;
-    /* Add horizontal padding */
-    padding-right: 1rem;
-}
-
-@media (max-width: 768px) {
-    .app-wrapper>* {
-        margin-bottom: 2.5rem;
-    }
+    color: #fff;
+    font-family: sans-serif;
 }
 </style>

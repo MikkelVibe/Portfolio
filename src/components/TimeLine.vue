@@ -80,10 +80,9 @@ onMounted(() => {
         .then((data) => {
             timelineData.value.education = data.education || sampleData.education
             timelineData.value.work = data.work || sampleData.work
-            loading.value = false
         })
-        .catch(() => {
-            console.log("Failed to load json")
+        .catch((e) => {
+            console.log("Failed to load json", e)
         })
 })
 
@@ -110,7 +109,7 @@ const getInitials = (name) => {
     return name.split(' ')
         .map(word => word.charAt(0))
         .join('')
-        .substring(0, 2)
+        .substring(0, 3)
         .toUpperCase()
 }
 </script>

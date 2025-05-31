@@ -1,8 +1,8 @@
 <template>
     <div class="project-card">
-        <div class="image-wrapper">
+        <router-link :to="`/project/${project.id}`" class="image-wrapper" href="/project">
             <img :src="project.imagePath" :alt="project.name" class="project-image" />
-        </div>
+        </router-link>
         <div class="project-info">
             <div class="project-header">
                 <h2 class="project-title">{{ project.name }}</h2>
@@ -17,14 +17,18 @@
 </template>
 
 <script lang="ts" setup>
+
+export interface ProjectInfo {
+    id: number
+    name: string
+    imagePath: string
+    shortIntro: string
+    description: string
+    technologies: string[]
+}
+
 defineProps<{
-    project: {
-        name: string;
-        imagePath: string;
-        intro: string;
-        technologies: string[];
-        link: string;
-    };
+    project: ProjectInfo;
 }>();
 </script>
 
@@ -42,7 +46,6 @@ defineProps<{
     flex-direction: column;
     justify-content: space-between;
     border: 20px solid #1a1a1a;
-    /* Added border */
 }
 
 .image-wrapper {
@@ -59,6 +62,7 @@ defineProps<{
 
 .image-wrapper:hover .project-image {
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .project-info {
