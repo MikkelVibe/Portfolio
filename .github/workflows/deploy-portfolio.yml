@@ -30,7 +30,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
-          username: ${{ root }}
+          username: root
           key: ${{ secrets.VPS_DEPLOY_KEY }}
           source: "dist/*"
           target: "/var/www/mikkelvibe-${{ env.TIMESTAMP }}"
@@ -39,7 +39,7 @@ jobs:
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.VPS_HOST }}
-          username: ${{ root }}
+          username: root
           key: ${{ secrets.VPS_DEPLOY_KEY }}
           script: |
             ln -sfn /var/www/mikkelvibe-${{ env.TIMESTAMP }} /var/www/mikkelvibe
