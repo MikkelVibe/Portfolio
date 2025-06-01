@@ -1,0 +1,45 @@
+name: Deploy Vue App
+
+on:
+  push:
+    branches: [main]  # or your deploy branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Generate timestamp
+        id: time
+        run: echo "TIMESTAMP=$(date -u +'%Y%m%dT%H%MZ')" >> $GITHUB_ENV
+
+      - name: Upload to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VUE_VPS_HOST }}
+          username: ${{ secrets.VUE_VPS_USER }}
+          key: ${{ secrets.VUE_VPS_SSH_KEY }}
+          source: "dist/*"
+          target: "/var/www/mikkelvibe-${{ env.TIMESTAMP }}"
+
+      - name: Update symlink for zero-downtime deploy
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VUE_VPS_HOST }}
+          username: ${{ secrets.VUE_VPS_USER }}
+          key: ${{ secrets.VUE_VPS_SSH_KEY }}
+          script: |
+            ln -sfn /var/www/mikkelvibe-${{ env.TIMESTAMP }} /var/www/mikkelvibe
