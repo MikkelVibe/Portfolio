@@ -8,7 +8,7 @@
                 <span> and Designer</span>
             </h1>
             <p class="description">
-                Hello, my name is Mikkel. A computer science student with a special interest for web.
+                Hi, I'm Mikkel — a computer science student with a special intererst for web.
             </p>
         </div>
     </section>
