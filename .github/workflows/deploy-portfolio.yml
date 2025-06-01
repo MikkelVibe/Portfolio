@@ -2,7 +2,7 @@ name: Deploy Vue App
 
 on:
   push:
-    branches: [main]  # adjust if needed
+    branches: [main]  # or your deploy branch
 
 jobs:
   build-and-deploy:
@@ -26,33 +26,29 @@ jobs:
         id: time
         run: echo "TIMESTAMP=$(date -u +'%Y%m%dT%H%MZ')" >> $GITHUB_ENV
 
-      # Clean up any previous temp folder
-      - name: Clean old temp folder
+      - name: Create deploy directory and upload built app
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.VPS_HOST }}
           username: root
           key: ${{ secrets.VPS_DEPLOY_KEY }}
           script: |
-            rm -rf /var/www/tmp_dist
+            mkdir -p /var/www/mikkelvibe-${{ env.TIMESTAMP }}
 
-      # Upload built Vue app to temporary folder
-      - name: Upload built app
+      - name: Upload built app (dist/* into timestamped dir)
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
           username: root
           key: ${{ secrets.VPS_DEPLOY_KEY }}
           source: "dist/*"
-          target: "/var/www/tmp_dist"
+          target: "/var/www/mikkelvibe-${{ env.TIMESTAMP }}"
 
-      # Move to versioned folder and update symlink for zero-downtime deploy
-      - name: Finalize deploy and update symlink
+      - name: Update symlink for zero-downtime deploy
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.VPS_HOST }}
           username: root
           key: ${{ secrets.VPS_DEPLOY_KEY }}
           script: |
-            mv /var/www/tmp_dist /var/www/mikkelvibe-${{ env.TIMESTAMP }}
             ln -sfn /var/www/mikkelvibe-${{ env.TIMESTAMP }} /var/www/mikkelvibe
