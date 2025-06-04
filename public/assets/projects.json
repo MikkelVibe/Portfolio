@@ -37,7 +37,8 @@
             "Kubernetes"
         ],
         "links": [
-            {"name": "Github", "link": "https://github.com/MikkelVibeUCN/ETLFrontend"}
+            {"name": "Github Frontend", "link": "https://github.com/MikkelVibeUCN/ETLFrontend"},
+            {"name": "Github Backend", "link": "https://github.com/Ahsm123/ETL-Project"}
         ]
     }
 ]
