@@ -1,5 +1,3 @@
-Portfolio Website
-
 Welcome to my personal portfolio website — a place where I showcase who I am, what I build, and the things I care about.
 
 ✨ Features
