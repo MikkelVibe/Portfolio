@@ -1,6 +1,7 @@
 <template>
     <div class="timeline-container">
         <h2 class="header-title" v-scroll-reveal>Timeline</h2>
+
         <div class="tabs" v-scroll-reveal>
             <button :class="{ active: selectedTab === 'work' }" @click="selectedTab = 'work'" class="tab-button">
                 Work
@@ -22,26 +23,37 @@
                     </div>
 
                     <div class="content">
-                        <div class="date-range">{{ formatPeriod(item.from, item.to) }}</div>
-                        <h3 class="title">
-                            {{ selectedTab === 'education' ? item.institution : item.company }}
-                        </h3>
-                        <h4 class="subtitle">
-                            {{ selectedTab === 'education' ? item.title : item.position }}
-                        </h4>
+                        <template v-if="selectedTab === 'education'">
+                            <div class="date-range">{{ formatPeriod(item.from, item.to) }}</div>
+                            <h3 class="title">{{ item.institution }}</h3>
+                            <h4 class="subtitle">{{ item.title }}</h4>
+                            <ul v-if="item.highlights && item.highlights.length" class="highlights">
+                                <li v-for="highlight in item.highlights" :key="highlight">{{ highlight }}</li>
+                            </ul>
+                            <div v-if="item.projects && item.projects.length" class="projects">
+                                <a v-for="project in item.projects" :key="project.name" :href="project.url"
+                                    target="_blank" rel="noopener noreferrer" class="project-tag">
+                                    🔗 {{ project.name }}
+                                </a>
+                            </div>
+                        </template>
 
-                        <ul v-if="item.highlights && item.highlights.length" class="highlights">
-                            <li v-for="highlight in item.highlights" :key="highlight">
-                                {{ highlight }}
-                            </li>
-                        </ul>
-
-                        <div v-if="item.projects && item.projects.length" class="projects">
-                            <a v-for="project in item.projects" :key="project.name" :href="project.url" target="_blank"
-                                rel="noopener noreferrer" class="project-tag">
-                                🔗 {{ project.name }}
-                            </a>
-                        </div>
+                        <template v-else>
+                            <h3 class="title">{{ item.company }}</h3>
+                            <div v-for="(role, idx) in item.roles" :key="idx" class="role-block">
+                                <div class="date-range">{{ formatPeriod(role.from, role.to) }}</div>
+                                <h4 class="subtitle">{{ role.position }}</h4>
+                                <ul v-if="role.highlights && role.highlights.length" class="highlights">
+                                    <li v-for="highlight in role.highlights" :key="highlight">{{ highlight }}</li>
+                                </ul>
+                                <div v-if="role.projects && role.projects.length" class="projects">
+                                    <a v-for="project in role.projects" :key="project.name" :href="project.url"
+                                        target="_blank" rel="noopener noreferrer" class="project-tag">
+                                        🔗 {{ project.name }}
+                                    </a>
+                                </div>
+                            </div>
+                        </template>
                     </div>
                 </div>
             </div>
@@ -57,37 +69,39 @@ const timelineData = ref({ education: [], work: [] })
 
 const vScrollReveal = {
     mounted(el) {
-        el.classList.add('before-enter');
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.classList.add('enter');
-                    el.classList.remove('before-enter');
-                    observer.unobserve(el);
-                }
-            },
-            { threshold: 0.1 }
-        );
-        observer.observe(el);
+        el.classList.add('before-enter')
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                el.classList.add('enter')
+                el.classList.remove('before-enter')
+                observer.unobserve(el)
+            }
+        }, { threshold: 0.1 })
+        observer.observe(el)
     }
 }
 
 onMounted(() => {
     fetch('/assets/timeline.json')
-        .then((response) => {
-            return response.json()
+        .then(response => response.json())
+        .then(data => {
+            timelineData.value.education = data.education || []
+            timelineData.value.work = data.work || []
         })
-        .then((data) => {
-            timelineData.value.education = data.education || sampleData.education
-            timelineData.value.work = data.work || sampleData.work
-        })
-        .catch((e) => {
-            console.log("Failed to load json", e)
-        })
+        .catch(e => console.log('Failed to load json', e))
 })
 
 const sortedItems = computed(() => {
     const items = timelineData.value[selectedTab.value] || []
+
+    if (selectedTab.value === 'work') {
+        return [...items].sort((a, b) => {
+            const aFrom = a.roles?.[0]?.from || '0000-00'
+            const bFrom = b.roles?.[0]?.from || '0000-00'
+            return bFrom > aFrom ? 1 : -1
+        })
+    }
+
     return [...items].sort((a, b) => (b.from > a.from ? 1 : -1))
 })
 
@@ -106,11 +120,7 @@ const formatPeriod = (from, to) => {
 
 const getInitials = (name) => {
     if (!name) return '?'
-    return name.split(' ')
-        .map(word => word.charAt(0))
-        .join('')
-        .substring(0, 3)
-        .toUpperCase()
+    return name.split(' ').map(word => word.charAt(0)).join('').substring(0, 3).toUpperCase()
 }
 </script>
 
@@ -292,20 +302,10 @@ const getInitials = (name) => {
     color: #ffffff;
 }
 
-.loading {
-    text-align: center;
-    color: #a0a0a0;
-    padding: 40px;
-    font-size: 15px;
-}
-
-.error {
-    color: #ff6b6b;
-    text-align: center;
-    padding: 16px;
-    background: #181818;
-    border-radius: 12px;
-    border: 1px solid #ff6b6b;
+.role-block {
+    margin-bottom: 16px;
+    padding-left: 10px;
+    border-left: 2px solid #444;
 }
 
 .before-enter {

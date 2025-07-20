@@ -48,18 +48,34 @@
   "work": [
     {
       "id": 1,
-      "position": "Student Junior Frontend Developer",
       "company": "Econta Consulting Group",
-      "from": "2025-06",
-      "to": null,
       "color": "#6366f1",
-      "description": "Developing creative frontend solutions",
-      "highlights": [
-        "Working with modern web technologies and frameworks",
-        "Collaborating with senior developers in professional environment",
-        "Gaining hands-on experience in software development lifecycle"
-      ],
-      "projects": []
+      "roles": [
+        {
+          "position": "Junior Full-stack Developer",
+          "from": "2025-07",
+          "to": null,
+          "description": "Promoted to a full-stack role with responsibilities across both frontend and backend systems, focusing on feature development and performance improvements.",
+          "highlights": [
+            "Refactored an underperforming RPA dashboard to significantly improve performance and stability",
+            "Started implementing backend features and optimizing API performance",
+            "Collaborated with team members to deliver full-stack enhancements to the internal tool"
+          ],
+          "projects": []
+        },
+        {
+          "position": "Junior Frontend Developer",
+          "from": "2025-06",
+          "to": "2025-07",
+          "description": "Focused on improving internal frontend tools using Vue.js",
+          "highlights": [
+            "Improved code structure, readability, and maintainability in a Vue.js codebase",
+            "Redesigned the user interface based on personal initiative, which was later approved and adopted by stakeholders",
+            "Improved user experience by fixing layout issues and enhancing component logic"
+          ],
+          "projects": []
+        }
+      ]
     }
   ]
 }
