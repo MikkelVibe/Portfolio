@@ -15,7 +15,7 @@
             "Git"
         ],
         "links": [
-            {"name": "Github", "link": "https://github.com/MikkelVibeUCN/TilbudsAvisScraper"},
+            {"name": "Github", "link": "https://github.com/MikkelVibe/TilbudsAvisScraper"},
             {"name": "Visit", "link": "https://tilbudsfinder.dk/"}
         ]
     },
@@ -37,7 +37,7 @@
             "Kubernetes"
         ],
         "links": [
-            {"name": "Github Frontend", "link": "https://github.com/MikkelVibeUCN/ETLFrontend"},
+            {"name": "Github Frontend", "link": "https://github.com/MikkelVibe/ETLFrontend"},
             {"name": "Github Backend", "link": "https://github.com/Ahsm123/ETL-Project"}
         ]
     }
