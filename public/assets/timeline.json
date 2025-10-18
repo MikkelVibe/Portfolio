@@ -76,6 +76,28 @@
           "projects": []
         }
       ]
+    },
+    {
+      "id": 2,
+      "company": "WEXO A/S",
+      "color": "#004684",
+      "roles": [
+        {
+          "position": "Intern Full-stack Developer",
+          "from": "2025-08",
+          "to": null,
+          "description": "Worked across both frontend and backend systems, focusing on feature development, plugin customization in Shopware, AI integration for client solutions, and performance improvements. Gained experience in professional project workflows, agile development, and collaborating with cross-functional teams.",
+          "highlights": [
+            "Developed and customized Shopware plugins using PHP, TypeScript, and Twig",
+            "Integrated AI solutions to automate product feature generation and image rendering for clients",
+            "Planned, estimated, and executed tasks independently while receiving feedback through code reviews",
+            "Learned and applied WEXO’s agile and iterative development processes",
+            "Collaborated effectively with colleagues and participated in team meetings, demos, and client-focused presentations",
+            "Contributed to performance improvements in plugins, including delayed cookie popups and API optimization"
+          ],
+          "projects": []
+        }
+      ]
     }
   ]
 }
