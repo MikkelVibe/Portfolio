@@ -37,8 +37,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 </template>
 
@@ -248,12 +246,10 @@ export default defineComponent({
     .actions {
         flex-direction: column;
         align-items: flex-start;
-        /* Add this line */
     }
 
     .btn {
         justify-content: center;
-        /* REMOVE width: 100%; */
     }
 
     .hero-section {
@@ -263,5 +259,11 @@ export default defineComponent({
     .header {
         padding: 40px 20px 20px;
     }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(24px, 6vw, 48px);
+  }
 }
 </style>

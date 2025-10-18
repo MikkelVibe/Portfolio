@@ -30,7 +30,7 @@
   {
     "name": "TypeScript",
     "icon": "/media/typescript.png",
-    "description": "JavaScript, but responsible",
+    "description": "Responsible JavaScript",
     "link": "https://www.typescriptlang.org/",
     "enabled": true
   },
@@ -94,7 +94,7 @@
   {
     "name": "Docker",
     "icon": "/media/docker.png",
-    "description": "Application deployment",
+    "description": "App deployment",
     "link": "https://www.docker.com/",
     "enabled": true
   },

@@ -104,7 +104,7 @@ export default defineComponent({
     }
 }
 
-@media (max-width: 767px) and (min-width: 481px) {
+@media (max-width: 767px) and (min-width: 451px) {
     .tech-container {
         grid-template-columns: repeat(2, 1fr);
     }
