@@ -6,7 +6,6 @@
       "institution": "University College Northern Jutland",
       "from": "2023-09",
       "to": null,
-      "color": "#3b82f6",
       "description": "Learning the ins and outs of computers",
       "highlights": [
         "Currently pursuing AP degree in Computer Science",
@@ -30,7 +29,6 @@
       "institution": "Tradium",
       "from": "2019-08",
       "to": "2022-06",
-      "color": "#10b981",
       "description": "Specialized with Game Development and Informatics",
       "highlights": [
         "Specialized with Game Development and Informatics",
@@ -49,12 +47,11 @@
     {
       "id": 1,
       "company": "Econta Consulting Group",
-      "color": "#6366f1",
       "roles": [
         {
           "position": "Junior Full-stack Developer",
           "from": "2025-07",
-          "to": null,
+          "to": "2025-11",
           "description": "Promoted to a full-stack role with responsibilities across both frontend and backend systems, focusing on feature development and performance improvements.",
           "highlights": [
             "Refactored an underperforming RPA dashboard to significantly improve performance and stability",
@@ -80,7 +77,6 @@
     {
       "id": 2,
       "company": "WEXO A/S",
-      "color": "#004684",
       "roles": [
         {
           "position": "Intern Full‐stack Developer",
@@ -102,7 +98,6 @@
     {
       "id": 3,
       "company": "Boligflow A/S",
-      "color": "#004684",
       "roles": [
         {
           "position": "Full-stack Developer",
@@ -122,7 +117,6 @@
     {
       "id": 4,
       "company": "Valoks I/S",
-      "color": "#004684",
       "roles": [
         {
           "position": "Full-stack Developer",

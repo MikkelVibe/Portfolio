@@ -67,6 +67,21 @@ import { ref, computed, onMounted } from 'vue'
 const selectedTab = ref('work')
 const timelineData = ref({ education: [], work: [] })
 
+// 15-color palette
+const colorPalette = [
+    '#6366f1', '#3b82f6', '#14b8a6', '#22c55e', '#10b981',
+    '#f59e0b', '#f97316', '#eab308', '#8b5cf6', '#0ea5e9',
+    '#06b6d4', '#f43f5e', '#ec4899', '#7c3aed', '#22d3ee'
+]
+
+// Assign unique color per item
+const assignColors = (items) => {
+    return items.map((item, index) => ({
+        ...item,
+        color: colorPalette[index % colorPalette.length]
+    }))
+}
+
 const vScrollReveal = {
     mounted(el) {
         el.classList.add('before-enter')
@@ -85,8 +100,8 @@ onMounted(() => {
     fetch('/assets/timeline.json')
         .then(response => response.json())
         .then(data => {
-            timelineData.value.education = data.education || []
-            timelineData.value.work = data.work || []
+            timelineData.value.education = assignColors(data.education || [])
+            timelineData.value.work = assignColors(data.work || [])
         })
         .catch(e => console.log('Failed to load json', e))
 })
@@ -124,6 +139,7 @@ const getInitials = (name) => {
     return name.split(' ').map(word => word.charAt(0)).join('').substring(0, 3).toUpperCase()
 }
 </script>
+
 
 <style scoped>
 .timeline-container {
