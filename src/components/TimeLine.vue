@@ -120,7 +120,7 @@ const formatPeriod = (from, to) => {
 
 const getInitials = (name) => {
     if (!name) return '?'
-    name = name.replace("A/S", "");
+    name = name.replace("A/S", "").replace("I/S", "");
     return name.split(' ').map(word => word.charAt(0)).join('').substring(0, 3).toUpperCase()
 }
 </script>

@@ -59,7 +59,7 @@
           "highlights": [
             "Refactored an underperforming RPA dashboard to significantly improve performance and stability",
             "Started implementing backend features and optimizing API performance",
-            "Collaborated with team members to deliver full-stack enhancements to the internal tool"
+            "Collaborated with team members to deliver full‐stack enhancements to the internal tool"
           ],
           "projects": []
         },
@@ -83,17 +83,57 @@
       "color": "#004684",
       "roles": [
         {
-          "position": "Intern Full-stack Developer",
+          "position": "Intern Full‐stack Developer",
           "from": "2025-08",
-          "to": null,
-          "description": "Worked across both frontend and backend systems, focusing on feature development, plugin customization in Shopware, AI integration for client solutions, and performance improvements. Gained experience in professional project workflows, agile development, and collaborating with cross-functional teams.",
+          "to": "2025-10",
+          "description": "Worked across both frontend and backend systems, focusing on feature development, plugin customization in Shopware, AI integration for client solutions, and performance improvements. Gained experience in professional project workflows, agile development, and collaborating with cross‐functional teams.",
           "highlights": [
             "Developed and customized Shopware plugins using PHP, TypeScript, and Twig",
             "Integrated AI solutions to automate product feature generation and image rendering for clients",
             "Planned, estimated, and executed tasks independently while receiving feedback through code reviews",
             "Learned and applied WEXO’s agile and iterative development processes",
-            "Collaborated effectively with colleagues and participated in team meetings, demos, and client-focused presentations",
+            "Collaborated effectively with colleagues and participated in team meetings, demos, and client‐focused presentations",
             "Contributed to performance improvements in plugins, including delayed cookie popups and API optimization"
+          ],
+          "projects": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Boligflow A/S",
+      "color": "#004684",
+      "roles": [
+        {
+          "position": "Full-stack Developer",
+          "from": "2025-11",
+          "to": null,
+          "description": "Worked across both frontend and backend systems for Boligflow, a SaaS platform for automated property administration. Collaborated with AI-assisted tools to accelerate development of various platform components, including the Beboerportal. Focused on automating workflows, enhancing integration features, and improving user experience for housing and commercial clients using Laravel, PHP, and Blade templates.",
+          "highlights": [
+            "Developed and improved features for integration with third-party systems (e.g., consumption accounting and billing).",
+            "Worked closely with AI-assisted development tools to accelerate coding, debugging, and feature implementation.",
+            "Contributed to the Beboerportal project, enhancing user experience and streamlining property management workflows.",
+            "Integrated the Beboerportal tighly with Boligflow's systems."
+          ],
+          "projects": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "company": "Valoks I/S",
+      "color": "#004684",
+      "roles": [
+        {
+          "position": "Full-stack Developer",
+          "from": "2025-11",
+          "to": null,
+          "description": "Worked across multiple projects on both frontend and backend tasks for Valoks, a Danish software house. Gained experience designing scalable systems, optimizing automation workflows, and contributing to diverse client and internal projects using modern web technologies.",
+          "highlights": [
+            "Contributed to various projects, handling both frontend and backend tasks including feature planning, implementation, and testing.",
+            "Worked on automating business systems and improving internal software product portfolio.",
+            "Participated in agile sprint cycles and code reviews, gaining insight into full product lifecycles in a small team environment.",
+            "Collaborated with teammates to streamline development processes and deliver high-quality solutions across multiple projects."
           ],
           "projects": []
         }
