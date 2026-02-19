@@ -1,153 +1,46 @@
-{
-  "education": [
+[
     {
-      "id": 1,
-      "title": "AP in Computer Science",
-      "institution": "University College Northern Jutland",
-      "from": "2023-09",
-      "to": "2026-01",
-      "description": "Learning the ins and outs of computers",
-      "highlights": [
-        "Focus on practical programming and system development",
-        "Building foundation in software engineering principles"
-      ],
-      "projects": [
-        {
-          "name": "3rd Semester Project",
-          "url": "https://github.com/MikkelVibe/BeerWebshop"
-        },
-        {
-          "name": "4th Semester Project",
-          "url": "https://github.com/MikkelVibe/ETLFrontend"
-        },
-        {
-          "name": "5th Semester Project",
-          "url": "https://github.com/MikkelVibe/translation-pipeline-backend"
-        }
-      ]
+        "id": 0,
+        "name": "TilbudsFinder.dk",
+        "imagePath": "/projects/TilbudsFinder.png",
+        "shortIntro": "Find the best deals on grocer products",
+        "description": "Tilbudsfinder is a passion project of mine, initially created to minimize the amount of time spent looking through grocer papers. It's a web application built with C# and .NET that aggregates and displays current grocery store discounts. Utilizing a robust API for seamless data integration and is deployed on a Linux VPS, ensuring reliable and scalable performance. The project is designed to provide users with a streamlined way to find and compare deals, making grocery shopping more cost-efficient and convenient.",
+        "technologies": [
+            "C#",
+            "Blazor",
+            "JavaScript",
+            "Ubuntu",
+            "MSSQL",
+            "Docker",
+            ".NET",
+            "CI/CD",
+            "Git"
+        ],
+        "links": [
+            {"name": "Github", "link": "https://github.com/MikkelVibe/TilbudsAvisScraper"},
+            {"name": "Visit", "link": "https://tilbudsfinder.dk/"}
+        ]
     },
     {
-      "id": 2,
-      "title": "HTX - Upper Secondary Education",
-      "institution": "Tradium",
-      "from": "2019-08",
-      "to": "2022-06",
-      "description": "Specialized with Game Development and Informatics",
-      "highlights": [
-        "Specialized with Game Development and Informatics",
-        "Developed technical foundation in programming",
-        "Completed upper secondary education with technical focus"
-      ],
-      "projects": [
-        {
-          "name": "Game Dev Project",
-          "url": "https://winnermikkel3.itch.io/terminator-game"
-        }
-      ]
+        "id": 1,
+        "name": "FluxETL",
+        "imagePath": "/projects/ETL.png",
+        "shortIntro": "Lowcode ETL pipeline builder",
+        "description": "FluxETL is a configuration-based data integration solution developed in collaboration with ECG, built using .NET 8, Apache Kafka, and Vue.js. The platform enables non-technical users to design and manage ETL pipelines through an intuitive no-code interface with drag-and-drop functionality. Its event-driven microservice architecture ensures high scalability, asynchronous processing, and robust error handling via dead-letter queues. Fully containerized for deployment with Kubernetes, FluxETL supports diverse data sources and destinations, and is designed for seamless integration into ECG's Enterprise Automation Platform.",
+        "technologies": [
+            "C#",
+            ".NET",
+            "Vue.js",
+            "TypeScript",
+            "MySQL",
+            "Apache Kafka",
+            "Docker",
+            "Git",
+            "Kubernetes"
+        ],
+        "links": [
+            {"name": "Github Frontend", "link": "https://github.com/MikkelVibe/ETLFrontend"},
+            {"name": "Github Backend", "link": "https://github.com/Ahsm123/ETL-Project"}
+        ]
     }
-  ],
-  "work": [
-    {
-      "id": 1,
-      "company": "Econta Consulting Group",
-      "roles": [
-        {
-          "position": "Junior Full-stack Developer",
-          "from": "2025-07",
-          "to": "2025-11",
-          "description": "Promoted to a full-stack role with responsibilities across both frontend and backend systems, focusing on feature development and performance improvements.",
-          "highlights": [
-            "Refactored an underperforming RPA dashboard to significantly improve performance and stability",
-            "Started implementing backend features and optimizing API performance",
-            "Collaborated with team members to deliver full‐stack enhancements to the internal tool"
-          ],
-          "projects": []
-        },
-        {
-          "position": "Junior Frontend Developer",
-          "from": "2025-06",
-          "to": "2025-07",
-          "description": "Focused on improving internal frontend tools using Vue.js",
-          "highlights": [
-            "Improved code structure, readability, and maintainability in a Vue.js codebase",
-            "Redesigned the user interface based on personal initiative, which was later approved and adopted by stakeholders",
-            "Improved user experience by fixing layout issues and enhancing component logic"
-          ],
-          "projects": []
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "company": "WEXO A/S",
-      "roles": [
-        {
-          "position": "Intern Full‐stack Developer",
-          "from": "2025-08",
-          "to": "2025-10",
-          "description": "Worked across both frontend and backend systems, focusing on feature development, plugin customization in Shopware, AI integration for client solutions, and performance improvements. Gained experience in professional project workflows, agile development, and collaborating with cross‐functional teams.",
-          "highlights": [
-            "Developed and customized Shopware plugins using PHP, TypeScript, and Twig",
-            "Integrated AI solutions to automate product feature generation and image rendering for clients",
-            "Planned, estimated, and executed tasks independently while receiving feedback through code reviews",
-            "Learned and applied WEXO’s agile and iterative development processes",
-            "Collaborated effectively with colleagues and participated in team meetings, demos, and client‐focused presentations",
-            "Contributed to performance improvements in plugins, including delayed cookie popups and API optimization"
-          ],
-          "projects": []
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "company": "Boligflow A/S",
-      "roles": [
-        {
-          "position": "Full-stack Developer (Full-time)",
-          "from": "2026-02",
-          "to": null,
-          "description": "Transitioned to a full-time role with broader ownership across frontend and backend development. Led the development of Beboerportalen (web platform) and Flytteflow (mobile app) for a major property management company, ensuring tight integration with Boligflow’s core systems and third-party services.",
-          "highlights": [
-            "Architected and delivered Beboerportalen as a fully integrated web platform.",
-            "Led development of Flytteflow as a mobile application aligned with core platform workflows.",
-            "Strengthened integration between user-facing platforms and Boligflow’s backend systems.",
-            "Delivered scalable, production-ready features with a focus on maintainability and performance.",
-            "Continued leveraging AI-assisted development tools to optimize workflows and delivery speed."
-          ],
-          "projects": []
-        },
-        {
-          "position": "Full-stack Developer (Part-time)",
-          "from": "2025-11",
-          "to": "2026-02",
-          "description": "Worked part-time alongside my studies on both frontend and backend systems for Boligflow, a SaaS platform for automated property administration. Contributed to the development of core platform components, including Beboerportalen, focusing on workflow automation, system integrations, and user experience improvements using Laravel, PHP, and Blade.",
-          "highlights": [
-            "Developed and improved features for third-party integrations (e.g., consumption accounting and billing systems).",
-            "Contributed to the Beboerportalen web platform, improving user experience and streamlining property management workflows.",
-            "Worked with AI-assisted development tools to accelerate coding, debugging, and feature implementation."
-          ],
-          "projects": []
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "company": "Valoks I/S",
-      "roles": [
-        {
-          "position": "Full-stack Developer",
-          "from": "2025-11",
-          "to": null,
-          "description": "Worked across multiple projects on both frontend and backend tasks for Valoks, a Danish software house. Gained experience designing scalable systems, optimizing automation workflows, and contributing to diverse client and internal projects using modern web technologies.",
-          "highlights": [
-            "Contributed to various projects, handling both frontend and backend tasks including feature planning, implementation, and testing.",
-            "Worked on automating business systems and improving internal software product portfolio.",
-            "Participated in agile sprint cycles and code reviews, gaining insight into full product lifecycles in a small team environment.",
-            "Collaborated with teammates to streamline development processes and deliver high-quality solutions across multiple projects."
-          ],
-          "projects": []
-        }
-      ]
-    }
-  ]
-}
+]
