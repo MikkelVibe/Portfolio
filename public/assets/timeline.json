@@ -5,10 +5,9 @@
       "title": "AP in Computer Science",
       "institution": "University College Northern Jutland",
       "from": "2023-09",
-      "to": null,
+      "to": "2026-01",
       "description": "Learning the ins and outs of computers",
       "highlights": [
-        "Currently pursuing AP degree in Computer Science",
         "Focus on practical programming and system development",
         "Building foundation in software engineering principles"
       ],
@@ -20,6 +19,10 @@
         {
           "name": "4th Semester Project",
           "url": "https://github.com/MikkelVibe/ETLFrontend"
+        },
+        {
+          "name": "5th Semester Project",
+          "url": "https://github.com/MikkelVibe/translation-pipeline-backend"
         }
       ]
     },
@@ -100,18 +103,31 @@
       "company": "Boligflow A/S",
       "roles": [
         {
-          "position": "Full-stack Developer",
-          "from": "2025-11",
+          "position": "Full-stack Developer (Full-time)",
+          "from": "2026-02",
           "to": null,
-          "description": "Worked across both frontend and backend systems for Boligflow, a SaaS platform for automated property administration. Collaborated with AI-assisted tools to accelerate development of various platform components, including the Beboerportal. Focused on automating workflows, enhancing integration features, and improving user experience for housing and commercial clients using Laravel, PHP, and Blade templates.",
+          "description": "Transitioned to a full-time role with broader ownership across frontend and backend development. Led the development of Beboerportalen (web platform) and Flytteflow (mobile app) for a major property management company, ensuring tight integration with Boligflow’s core systems and third-party services.",
           "highlights": [
-            "Developed and improved features for integration with third-party systems (e.g., consumption accounting and billing).",
-            "Worked closely with AI-assisted development tools to accelerate coding, debugging, and feature implementation.",
-            "Contributed to the Beboerportal project, enhancing user experience and streamlining property management workflows.",
-            "Integrated the Beboerportal tighly with Boligflow's systems."
+            "Architected and delivered Beboerportalen as a fully integrated web platform.",
+            "Led development of Flytteflow as a mobile application aligned with core platform workflows.",
+            "Strengthened integration between user-facing platforms and Boligflow’s backend systems.",
+            "Delivered scalable, production-ready features with a focus on maintainability and performance.",
+            "Continued leveraging AI-assisted development tools to optimize workflows and delivery speed."
           ],
           "projects": []
-        }
+        },
+        {
+          "position": "Full-stack Developer (Part-time)",
+          "from": "2025-11",
+          "to": "2026-02",
+          "description": "Worked part-time alongside my studies on both frontend and backend systems for Boligflow, a SaaS platform for automated property administration. Contributed to the development of core platform components, including Beboerportalen, focusing on workflow automation, system integrations, and user experience improvements using Laravel, PHP, and Blade.",
+          "highlights": [
+            "Developed and improved features for third-party integrations (e.g., consumption accounting and billing systems).",
+            "Contributed to the Beboerportalen web platform, improving user experience and streamlining property management workflows.",
+            "Worked with AI-assisted development tools to accelerate coding, debugging, and feature implementation."
+          ],
+          "projects": []
+        },
       ]
     },
     {
