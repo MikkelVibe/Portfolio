@@ -8,7 +8,7 @@
                 <span class="white"> and Designer</span>
             </h1>
             <p class=" description">
-                Hi, I'm Mikkel — a computer science student with a special interest for web.
+                Hi, I'm Mikkel — a software developer with a special interest for web.
             </p>
 
             <div class="social-icons" aria-label="Social and contact links">
